@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo Dojo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title">
+                <h1>DojoWeather</h1>
+            </div>
+            <div class="nav">
+                <ul class="list-city">
+                    <li onclick="cargando()"><a class="select-city" href="#">Burbank</a></li>
+                    <li onclick="cargando()"><a class="select-city" href="#">Chicago</a></li>
+                    <li onclick="cargando()"><a class="select-city" href="#">Dallas</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="body">
+            <div class="san-jose">
+                <h2 class="city">San Jose</h2>
+                <div class="temperatura">
+                    <p>show temperature in</p>
+                    <select name="temp" id="select-temp" onchange="cambiarUnidad(this)">
+                        <option>°C</option>
+                        <option>°F</option>
+                    </select>
+                </div>
+            </div>
+            <div class="pronostico-dias">
+                <div class="pronostico">
+                    <h2 class="day">Today</h2>
+                    <img src="./assets/some_rain.png" alt="lluvia" class="icon">
+                    <p class="text-pronostico">some rain</p>
+                    <div class="max-min">
+                        <h3 class="max" id="temp1">24°</h3>
+                        <h3 class="min" id="temp2">18°</h3>
+                    </div>
+                </div>
+                <div class="pronostico">
+                    <h2 class="day">Tomorrow</h2>
+                    <img src="./assets/some_sun.png" alt="soleado" class="icon">
+                    <p class="text-pronostico">some sun</p>
+                    <div class="max-min">
+                        <h3 class="max" id="temp3">27°</h3>
+                        <h3 class="min" id="temp4">19°</h3>
+                    </div>
+                </div>
+                <div class="pronostico">
+                    <h2 class="day">Friday</h2>
+                    <img src="./assets/some_clouds.png" alt="nublado" class="icon">
+                    <p class="text-pronostico">some clouds</p>
+                    <div class="max-min">
+                        <h3 class="max" id="temp5">21°</h3>
+                        <h3 class="min" id="temp6">16°</h3>
+                    </div>
+                </div>
+                <div class="pronostico">
+                    <h2 class="day">Saturday</h2>
+                    <img src="./assets/some_sun.png" alt="soleado" class="icon">
+                    <p class="text-pronostico">some sun</p>
+                    <div class="max-min">
+                        <h3 class="max" id="temp7">26°</h3>
+                        <h3 class="min" id="temp8">21°</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cookies">
+            <img src="./assets/cookie.png" alt="cookie" class="icon-cookie" >
+            <div class="text-cookie">
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#"> Read more...</a></p>
+            </div>
+            <button class="accept-cookie" onclick="aceptar()">I Accept</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
